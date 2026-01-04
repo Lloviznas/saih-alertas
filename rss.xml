@@ -4,6 +4,13 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Sun, 04 Jan 2026 20:55:03 +0000</lastBuildDate>
+<lastBuildDate>Sun, 04 Jan 2026 21:34:01 +0000</lastBuildDate>
+<item>
+<title><![CDATA[ALERTA NIVEL 2: RIO GUADALHORCE (ALJAIMA) (MA) NIVEL MEDIO=1.62 m (umbral 1.50 m)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>46-L2-1767562441</guid>
+<pubDate>Sun, 04 Jan 2026 21:34:01 +0000</pubDate>
+<description><![CDATA[<p><b>Estación:</b> RIO GUADALHORCE (ALJAIMA) (MA)</p><p><b>NIVEL MEDIO (m):</b> 1.62</p><p><b>Nivel alcanzado:</b> 2</p><p><b>Umbral nivel 2:</b> 1.50 m</p><p><b>Histeresis anti-rebote:</b> 0.05 m</p><p><i>Fuente:</i> https://www.redhidrosurmedioambiente.es/saih/resumen/rios</p>]]></description>
+</item>
 </channel>
 </rss>
