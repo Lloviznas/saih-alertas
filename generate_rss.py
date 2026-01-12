@@ -47,13 +47,14 @@ def safe_load_state():
             return json.loads(STATE_PATH.read_text(encoding="utf-8"))
         except Exception:
             pass
-    return {
-        "last_levels": {},
-    }
+    return {"last_levels": {}}
 
 
 def save_state(state: dict):
-    STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+    STATE_PATH.write_text(
+        json.dumps(state, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
 
 
 def fetch_html():
@@ -130,8 +131,8 @@ def build_items(state, stations, last_update_text):
                 title = f"Nivel {lvl} alcanzado: {s['name']}"
                 desc = (
                     f"Estación {sid} ({s.get('prov')}): "
-                    f"NIVEL MEDIO pasa de {prev:.2f} m a {curr:.2f} m "
-                    f"y cruza {thr:.2f} m. "
+                    f"el NIVEL MEDIO pasa de {prev:.2f} m a {curr:.2f} m "
+                    f"y cruza el umbral {thr:.2f} m. "
                     f"Datos actualizados a: {last_update_text}."
                 )
                 guid = f"cross-{sid}-L{lvl}-{last_update_text}"
@@ -146,16 +147,17 @@ def build_items(state, stations, last_update_text):
         if curr is not None:
             last_levels[sid] = curr
 
-    # 🔥 HEARTBEAT FORZADO: SIEMPRE al menos 1 item
+    # HEARTBEAT con asunto neutro (sin alarmismo)
     if not items:
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         items.append({
-            "title": "Sin cruces detectados (heartbeat)",
+            "title": "No se han producido fluctuaciones reseñables",
             "description": (
-                "No se han detectado cruces de umbral (niveles 1/2/3) "
-                f"en estaciones MA/CA. Datos actualizados a: {last_update_text}."
+                "No se han detectado fluctuaciones significativas ni cruces "
+                "de umbrales (niveles 1/2/3) en estaciones MA/CA. "
+                f"Datos actualizados a: {last_update_text}."
             ),
-            "guid": f"heartbeat-{today}",
+            "guid": f"estado-estable-{today}",
             "pubDate": rfc2822_now(),
             "link": RSS_LINK,
         })
