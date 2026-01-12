@@ -11,7 +11,18 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
+    steps:     
+    - name: Debug fetch SAIH (headers)
+        run: |
+          curl -I -L "https://www.redhidrosurmedioambiente.es/saih/resumen/rios" || true
+
+      - name: Debug fetch SAIH (size)
+        run: |
+          curl -L "https://www.redhidrosurmedioambiente.es/saih/resumen/rios" -o /tmp/saih.html || true
+          ls -lh /tmp/saih.html || true
+          wc -c /tmp/saih.html || true
+          head -n 20 /tmp/saih.html || true
+
       - name: Checkout repo
         uses: actions/checkout@v4
 
