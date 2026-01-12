@@ -19,17 +19,57 @@ jobs:
         run: |
           curl -I -L "https://www.redhidrosurmedioambiente.es/saih/resumen/rios" || true
 
-      - name: Debug fetch SAIH (size + endpoints)
+      - name: Debug fetch SAIH (html + scripts + table sniff)
         run: |
-          curl -L "https://www.redhidrosurmedioambiente.es/saih/resumen/rios" -o /tmp/saih.html || true
-          ls -lh /tmp/saih.html || true
-          wc -c /tmp/saih.html || true
-          echo "---- PRIMERAS 30 LINEAS ----"
-          head -n 30 /tmp/saih.html || true
-          echo "---- BUSCANDO POSIBLES ENDPOINTS ----"
-          grep -RniE "api|json|ajax|fetch\(|axios|endpoint|resumen|niveles|rios|estacion" /tmp/saih.html | head -n 80 || true
-          echo "---- ULTIMAS 80 LINEAS ----"
-          tail -n 80 /tmp/saih.html || true
+          set -e
+          URL="https://www.redhidrosurmedioambiente.es/saih/resumen/rios"
+
+          echo "---- DESCARGA HTML ----"
+          curl -L "$URL" -o /tmp/saih.html
+          ls -lh /tmp/saih.html
+          wc -c /tmp/saih.html
+
+          echo "---- BUSCAR TABLA / PALABRAS CLAVE EN HTML ----"
+          echo "Conteo <table>:"
+          grep -o "<table" /tmp/saih.html | wc -l || true
+          echo "Conteo <tr>:"
+          grep -o "<tr" /tmp/saih.html | wc -l || true
+          echo "Buscar palabras: NIVEL / medio / estación / umbral / n/d"
+          grep -RniE "NIVEL|nivel|MEDIO|medio|estaci|umbral|n/d|rojo|amarillo|naranja" /tmp/saih.html | head -n 80 || true
+
+          echo "---- EXTRAER TROZO CERCA DE 'Resumen niveles de r' ----"
+          # Saca ~120 líneas alrededor de la cabecera del bloque (si existe)
+          LINE=$(grep -n "Resumen niveles de" /tmp/saih.html | head -n 1 | cut -d: -f1 || true)
+          if [ -n "$LINE" ]; then
+            START=$((LINE-40)); if [ "$START" -lt 1 ]; then START=1; fi
+            END=$((LINE+120))
+            echo "Mostrando lineas $START a $END"
+            sed -n "${START},${END}p" /tmp/saih.html || true
+          else
+            echo "No encontre 'Resumen niveles de' literal en el HTML."
+          fi
+
+          echo "---- LISTAR <script src=...> ----"
+          # Extrae URLs de scripts externos
+          grep -oP '<script[^>]+src="\K[^"]+' /tmp/saih.html | sed 's/&amp;/\&/g' | sort -u | tee /tmp/scripts.txt || true
+          echo "Total scripts externos:"
+          wc -l /tmp/scripts.txt || true
+
+          echo "---- DESCARGAR SCRIPTS Y BUSCAR ENDPOINTS ----"
+          mkdir -p /tmp/js
+          i=0
+          while IFS= read -r S; do
+            [ -z "$S" ] && continue
+            i=$((i+1))
+            echo "SCRIPT $i: $S"
+            # Descarga (si falla, sigue)
+            curl -L "$S" -o "/tmp/js/script_$i.js" || true
+          done < /tmp/scripts.txt
+
+          echo "---- GREP ENDPOINTS EN JS ----"
+          grep -RniE "api|/json|\\.json|ajax|fetch\\(|axios|endpoint|resumen|rios|nivel|estacion" /tmp/js | head -n 200 || true
+
+          echo "---- FIN DEBUG ----"
 
       - name: Setup Python
         uses: actions/setup-python@v5
