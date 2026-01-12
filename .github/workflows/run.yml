@@ -2,7 +2,7 @@ name: Update RSS
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # cada 15 minutos (UTC)
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -11,8 +11,12 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:     
-    - name: Debug fetch SAIH (headers)
+    steps:
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Debug fetch SAIH (headers)
         run: |
           curl -I -L "https://www.redhidrosurmedioambiente.es/saih/resumen/rios" || true
 
@@ -22,9 +26,6 @@ jobs:
           ls -lh /tmp/saih.html || true
           wc -c /tmp/saih.html || true
           head -n 20 /tmp/saih.html || true
-
-      - name: Checkout repo
-        uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
