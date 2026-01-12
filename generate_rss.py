@@ -9,13 +9,10 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-
 URL_RIOS = "https://www.redhidrosurmedioambiente.es/saih/resumen/rios"
 RSS_PATH = Path("rss.xml")
 STATE_PATH = Path("state.json")
 
-# Ajusta estos umbrales a tu gusto (metros de NIVEL MEDIO).
-# Si tú ya tenías umbrales por estación, lo suyo es migrarlos aquí.
 THRESHOLDS = {
     1: 1.0,
     2: 2.0,
@@ -33,7 +30,6 @@ def parse_float_es(x: str):
     x = x.strip()
     if x.lower() == "n/d":
         return None
-    # 0,93 -> 0.93
     x = x.replace(".", "").replace(",", ".")
     try:
         return float(x)
@@ -52,8 +48,7 @@ def safe_load_state():
         except Exception:
             pass
     return {
-        "last_levels": {},          # {station_id: last_level_float}
-        "last_heartbeat_date": "",  # "YYYY-MM-DD"
+        "last_levels": {},
     }
 
 
@@ -63,7 +58,7 @@ def save_state(state: dict):
 
 def fetch_html():
     headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; RSSBot/1.0; +https://github.com/lloviznas/saih-alertas)"
+        "User-Agent": "Mozilla/5.0 (compatible; RSSBot/1.0)"
     }
     r = requests.get(URL_RIOS, headers=headers, timeout=30)
     r.raise_for_status()
@@ -71,15 +66,11 @@ def fetch_html():
 
 
 def extract_last_update(html: str):
-    # En el footer sale: "Datos actualizados a: 12-01-2026 13:00:00"
-    m = re.search(r"Datos actualizados a:\s*([0-9]{2}-[0-9]{2}-[0-9]{4}\s+[0-9]{2}:[0-9]{2}:[0-9]{2})", html)
-    if not m:
-        return None
-    try:
-        # Interpretamos como hora local de la web (normalmente UTC o local); lo guardamos como texto.
-        return m.group(1)
-    except Exception:
-        return None
+    m = re.search(
+        r"Datos actualizados a:\s*([0-9]{2}-[0-9]{2}-[0-9]{4}\s+[0-9]{2}:[0-9]{2}:[0-9]{2})",
+        html,
+    )
+    return m.group(1) if m else "n/d"
 
 
 def parse_rios_table(html: str):
@@ -89,26 +80,17 @@ def parse_rios_table(html: str):
         return []
 
     rows = table.find_all("tr")
-    if not rows:
-        return []
-
     stations = []
-    for tr in rows[1:]:  # saltar cabecera
+
+    for tr in rows[1:]:
         tds = tr.find_all("td")
         if len(tds) < 3:
             continue
 
-        # Estructura típica:
-        # 0 Número
-        # 1 Nombre
-        # 2 Nivel Medio (m)
-        # 3 Caudal Medio
-        # ...
         station_id = tds[0].get_text(strip=True)
         name = tds[1].get_text(" ", strip=True)
         level_txt = tds[2].get_text(strip=True)
 
-        # Algunos tienen provincia al final "(MA)" "(CA)" etc dentro del nombre
         prov = None
         mprov = re.search(r"\(([A-Z]{2})\)\s*$", name)
         if mprov:
@@ -136,21 +118,86 @@ def build_items(state, stations, last_update_text):
     items = []
     last_levels = state.get("last_levels", {})
 
-    # Solo MA/CA según tu descripción
     stations = [s for s in stations if s.get("prov") in ("MA", "CA")]
 
     for s in stations:
         sid = s["id"]
         curr = s["level"]
-        prev = last_levels.get(sid, None)
+        prev = last_levels.get(sid)
 
-        # Detectar cruces de nivel 1/2/3
         for lvl, thr in THRESHOLDS.items():
             if crossed(prev, curr, thr):
                 title = f"Nivel {lvl} alcanzado: {s['name']}"
-                desc = f"Estación {sid} ({s.get('prov')}): NIVEL MEDIO sube de {prev:.2f} m a {curr:.2f} m y cruza {thr:.2f} m. Datos actualizados a: {last_update_text or 'n/d'}."
-                guid = f"cross-{sid}-L{lvl}-{last_update_text or rfc2822_now()}"
-                pub = rfc2822_now()
-                items.append({"title": title, "description": desc, "guid": guid, "pubDate": pub, "link": RSS_LINK})
+                desc = (
+                    f"Estación {sid} ({s.get('prov')}): "
+                    f"NIVEL MEDIO pasa de {prev:.2f} m a {curr:.2f} m "
+                    f"y cruza {thr:.2f} m. "
+                    f"Datos actualizados a: {last_update_text}."
+                )
+                guid = f"cross-{sid}-L{lvl}-{last_update_text}"
+                items.append({
+                    "title": title,
+                    "description": desc,
+                    "guid": guid,
+                    "pubDate": rfc2822_now(),
+                    "link": RSS_LINK,
+                })
 
-        # Actuali
+        if curr is not None:
+            last_levels[sid] = curr
+
+    # 🔥 HEARTBEAT FORZADO: SIEMPRE al menos 1 item
+    if not items:
+        today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        items.append({
+            "title": "Sin cruces detectados (heartbeat)",
+            "description": (
+                "No se han detectado cruces de umbral (niveles 1/2/3) "
+                f"en estaciones MA/CA. Datos actualizados a: {last_update_text}."
+            ),
+            "guid": f"heartbeat-{today}",
+            "pubDate": rfc2822_now(),
+            "link": RSS_LINK,
+        })
+
+    state["last_levels"] = last_levels
+    return items
+
+
+def write_rss(items):
+    parts = []
+    parts.append('<?xml version="1.0" encoding="UTF-8"?>')
+    parts.append('<rss version="2.0">')
+    parts.append("<channel>")
+    parts.append(f"<title>{RSS_TITLE}</title>")
+    parts.append(f"<link>{RSS_LINK}</link>")
+    parts.append(f"<description>{RSS_DESC}</description>")
+    parts.append(f"<lastBuildDate>{rfc2822_now()}</lastBuildDate>")
+
+    for it in items:
+        parts.append("<item>")
+        parts.append(f"<title><![CDATA[{it['title']}]]></title>")
+        parts.append(f"<link>{it['link']}</link>")
+        parts.append(f"<guid isPermaLink='false'>{it['guid']}</guid>")
+        parts.append(f"<pubDate>{it['pubDate']}</pubDate>")
+        parts.append(f"<description><![CDATA[{it['description']}]]></description>")
+        parts.append("</item>")
+
+    parts.append("</channel>")
+    parts.append("</rss>")
+
+    RSS_PATH.write_text("\n".join(parts) + "\n", encoding="utf-8")
+
+
+def main():
+    state = safe_load_state()
+    html = fetch_html()
+    last_update_text = extract_last_update(html)
+    stations = parse_rios_table(html)
+    items = build_items(state, stations, last_update_text)
+    write_rss(items)
+    save_state(state)
+
+
+if __name__ == "__main__":
+    main()
