@@ -19,12 +19,17 @@ jobs:
         run: |
           curl -I -L "https://www.redhidrosurmedioambiente.es/saih/resumen/rios" || true
 
-      - name: Debug fetch SAIH (size)
+      - name: Debug fetch SAIH (size + endpoints)
         run: |
           curl -L "https://www.redhidrosurmedioambiente.es/saih/resumen/rios" -o /tmp/saih.html || true
           ls -lh /tmp/saih.html || true
           wc -c /tmp/saih.html || true
-          head -n 20 /tmp/saih.html || true
+          echo "---- PRIMERAS 30 LINEAS ----"
+          head -n 30 /tmp/saih.html || true
+          echo "---- BUSCANDO POSIBLES ENDPOINTS ----"
+          grep -RniE "api|json|ajax|fetch\(|axios|endpoint|resumen|niveles|rios|estacion" /tmp/saih.html | head -n 80 || true
+          echo "---- ULTIMAS 80 LINEAS ----"
+          tail -n 80 /tmp/saih.html || true
 
       - name: Setup Python
         uses: actions/setup-python@v5
