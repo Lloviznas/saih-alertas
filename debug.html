@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Debug SAIH</h1>
+    <p>Fecha: <span id="t"></span></p>
+    <p id="out">Cargando...</p>
+    <script>
+      document.getElementById("t").textContent = new Date().toISOString();
+      fetch("https://www.redhidrosurmedioambiente.es/saih/resumen/rios")
+        .then(r => r.text())
+        .then(t => document.getElementById("out").textContent = "OK, longitud HTML: " + t.length)
+        .catch(e => document.getElementById("out").textContent = "ERROR: " + e);
+    </script>
+  </body>
+</html>
