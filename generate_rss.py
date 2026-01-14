@@ -13,25 +13,36 @@ URL_RIOS = "https://www.redhidrosurmedioambiente.es/saih/resumen/rios"
 RSS_PATH = Path("rss.xml")
 STATE_PATH = Path("state.json")
 
-# Umbrales por defecto (para estaciones sin configuración específica)
-THRESHOLDS_DEFAULT = {
-    1: 1.0,
-    2: 2.0,
-    3: 3.0,
-}
-
-# Umbrales específicos por estación (override)
-# Río Alamao (Benalup - Casas V.) (Cádiz) -> ID 214
-THRESHOLDS_BY_STATION = {
-    "214": {1: 4.5, 2: 5.5, 3: 6.5},
-}
-
 RSS_TITLE = "AVISOS CRECIDAS SAIH"
 RSS_LINK = URL_RIOS
 RSS_DESC = (
     "Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO "
     "cruza niveles 1/2/3 en estaciones (MA/CA)."
 )
+
+# Umbrales ESPECÍFICOS por estación (NO hay umbral por defecto).
+# Si una estación no está aquí, NO generará alertas (evita falsos positivos).
+THRESHOLDS_BY_STATION = {
+    "34":  {1: 3.0, 2: 4.0, 3: 5.0},     # AZUD DE PAREDONES (MA)
+    "220": {1: 2.0, 2: 3.0, 3: 4.0},     # BARCA DE LA FLORIDA (CA)
+    "212": {1: 4.0, 2: 5.0, 3: 6.0},     # GUADALETE-JEREZ DE LA FRONTERA (CA)
+    "219": {1: 3.0, 2: 4.0, 3: 5.0},     # JUNTA DE LOS RÍOS (CA)
+    "224": {1: 1.0, 2: 2.0, 3: 3.0},     # PUENTE DE CUATRO OJOS-UBRIQUE (CA)
+    "46":  {1: 1.0, 2: 1.5, 3: 2.0},     # RIO GUADALHORCE (ALJAIMA) (MA)
+    "129": {1: 1.5, 2: 2.0, 3: 2.5},     # RIO GUADALTEBA (AFORO TEBA) (MA)
+    "214": {1: 4.5, 2: 5.5, 3: 6.5},     # RIO ÁLAMO (BENALUP-CASAS V.) (CA)
+    "43":  {1: 1.7, 2: 2.3, 3: 2.8},     # RIO BENAMARGOSA (S. NEGRO) (MA)
+    "106": {1: 1.0, 2: 2.0, 3: 3.2},     # RIO CAMPANILLAS (LOS LLANES) (MA)
+    "13":  {1: 1.0, 2: 1.6, 3: 2.1},     # RIO GENAL (JUBRIQUE) (MA)
+    "130": {1: 2.0, 2: 3.0, 3: 5.0},     # RIO GUADALHORCE (ARCHIDONA) (MA)
+    "1027":{1: 2.5, 2: 3.0, 3: 4.0},     # RIO GUADALHORCE (BOBADILLA) (MA)
+    "104": {1: 1.0, 2: 1.5, 3: 2.0},     # RIO GRANDE (LAS MILLANAS) (MA)
+    "38":  {1: 2.5, 2: 3.5, 3: 4.5},     # RIO GUADALHORCE (CARTAMA) (MA)
+    "103": {1: 1.4, 2: 1.7, 3: 2.0},     # RIO GUADIARO (TR.MAJACEITE) (MA)
+    "11":  {1: 3.0, 2: 4.0, 3: 5.0},     # RIO GUADIARO (S PABLO BUCEITE) (CA)
+    "9":   {1: 2.0, 2: 3.0, 3: 4.0},     # RIO HOZGARGANTA (JIMENA) (CA)
+    "128": {1: 1.5, 2: 2.0, 3: 2.5},     # RIO TURÓN (ARDALES) (MA)
+}
 
 
 def parse_float_es(x: str):
@@ -107,12 +118,7 @@ def parse_rios_table(html: str):
         level = parse_float_es(level_txt)
 
         stations.append(
-            {
-                "id": station_id,
-                "name": name,
-                "prov": prov,
-                "level": level,
-            }
+            {"id": station_id, "name": name, "prov": prov, "level": level}
         )
 
     return stations
@@ -122,10 +128,6 @@ def crossed(prev, curr, threshold):
     if prev is None or curr is None:
         return False
     return prev < threshold <= curr
-
-
-def thresholds_for_station(station_id: str):
-    return THRESHOLDS_BY_STATION.get(station_id, THRESHOLDS_DEFAULT)
 
 
 def build_items(state, stations, last_update_text):
@@ -140,40 +142,44 @@ def build_items(state, stations, last_update_text):
         curr = s["level"]
         prev = last_levels.get(sid)
 
-        thresholds = thresholds_for_station(sid)
+        thresholds = THRESHOLDS_BY_STATION.get(str(sid))
 
-        for lvl, thr in thresholds.items():
-            if crossed(prev, curr, thr):
-                title = f"Nivel {lvl} alcanzado: {s['name']}"
-                desc = (
-                    f"Estación {sid} ({s.get('prov')}): "
-                    f"el NIVEL MEDIO pasa de {prev:.2f} m a {curr:.2f} m "
-                    f"y cruza el umbral {thr:.2f} m.\n"
-                    f"Datos actualizados a: {last_update_text}."
-                )
-                guid = f"cross-{sid}-L{lvl}-{last_update_text}"
-                items.append(
-                    {
-                        "title": title,
-                        "description": desc,
-                        "guid": guid,
-                        "pubDate": rfc2822_now(),
-                        "link": RSS_LINK,
-                    }
-                )
+        # Solo alertamos si hay umbrales definidos para esa estación
+        if thresholds:
+            for lvl, thr in thresholds.items():
+                if crossed(prev, curr, thr):
+                    title = f"Nivel {lvl} alcanzado: {s['name']}"
+                    desc = (
+                        f"Estación {sid} ({s.get('prov')}): "
+                        f"el NIVEL MEDIO pasa de {prev:.2f} m a {curr:.2f} m "
+                        f"y cruza el umbral {thr:.2f} m.\n"
+                        f"Datos actualizados a: {last_update_text}."
+                    )
+                    guid = f"cross-{sid}-L{lvl}-{last_update_text}"
+                    items.append(
+                        {
+                            "title": title,
+                            "description": desc,
+                            "guid": guid,
+                            "pubDate": rfc2822_now(),
+                            "link": RSS_LINK,
+                        }
+                    )
 
+        # Guardamos siempre el último nivel (para que cuando añadas umbrales nuevos,
+        # el sistema tenga "previo" y funcione bien)
         if curr is not None:
             last_levels[sid] = curr
 
-    # HEARTBEAT con asunto neutro
+    # HEARTBEAT
     if not items:
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         items.append(
             {
                 "title": "No se han producido fluctuaciones reseñables",
                 "description": (
-                    "No se han detectado fluctuaciones significativas, ni cruces "
-                    "de umbrales (niveles 1/2/3) en estaciones de Málaga y/o Cádiz.\n"
+                    "No se han detectado fluctuaciones significativas, ni cruces de umbrales "
+                    "(niveles 1/2/3) en estaciones de Málaga y/o Cádiz.\n"
                     f"Datos actualizados a: {last_update_text}."
                 ),
                 "guid": f"estado-estable-{today}",
@@ -189,7 +195,7 @@ def build_items(state, stations, last_update_text):
 def write_rss(items):
     parts = []
     parts.append('<?xml version="1.0" encoding="UTF-8"?>')
-    parts.append('<rss version="2.0">')
+    parts.append("<rss version=\"2.0\">")
     parts.append("<channel>")
     parts.append(f"<title>{RSS_TITLE}</title>")
     parts.append(f"<link>{RSS_LINK}</link>")
@@ -223,4 +229,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
