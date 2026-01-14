@@ -20,28 +20,27 @@ RSS_DESC = (
     "cruza niveles 1/2/3 en estaciones (MA/CA)."
 )
 
-# Umbrales ESPECÍFICOS por estación (NO hay umbral por defecto).
-# Si una estación no está aquí, NO generará alertas (evita falsos positivos).
+# UMBRALES REALES POR ESTACIÓN (sin valores por defecto)
 THRESHOLDS_BY_STATION = {
-    "34":  {1: 3.0, 2: 4.0, 3: 5.0},     # AZUD DE PAREDONES (MA)
-    "220": {1: 2.0, 2: 3.0, 3: 4.0},     # BARCA DE LA FLORIDA (CA)
-    "212": {1: 4.0, 2: 5.0, 3: 6.0},     # GUADALETE-JEREZ DE LA FRONTERA (CA)
-    "219": {1: 3.0, 2: 4.0, 3: 5.0},     # JUNTA DE LOS RÍOS (CA)
-    "224": {1: 1.0, 2: 2.0, 3: 3.0},     # PUENTE DE CUATRO OJOS-UBRIQUE (CA)
-    "46":  {1: 1.0, 2: 1.5, 3: 2.0},     # RIO GUADALHORCE (ALJAIMA) (MA)
-    "129": {1: 1.5, 2: 2.0, 3: 2.5},     # RIO GUADALTEBA (AFORO TEBA) (MA)
-    "214": {1: 4.5, 2: 5.5, 3: 6.5},     # RIO ÁLAMO (BENALUP-CASAS V.) (CA)
-    "43":  {1: 1.7, 2: 2.3, 3: 2.8},     # RIO BENAMARGOSA (S. NEGRO) (MA)
-    "106": {1: 1.0, 2: 2.0, 3: 3.2},     # RIO CAMPANILLAS (LOS LLANES) (MA)
-    "13":  {1: 1.0, 2: 1.6, 3: 2.1},     # RIO GENAL (JUBRIQUE) (MA)
-    "130": {1: 2.0, 2: 3.0, 3: 5.0},     # RIO GUADALHORCE (ARCHIDONA) (MA)
-    "1027":{1: 2.5, 2: 3.0, 3: 4.0},     # RIO GUADALHORCE (BOBADILLA) (MA)
-    "104": {1: 1.0, 2: 1.5, 3: 2.0},     # RIO GRANDE (LAS MILLANAS) (MA)
-    "38":  {1: 2.5, 2: 3.5, 3: 4.5},     # RIO GUADALHORCE (CARTAMA) (MA)
-    "103": {1: 1.4, 2: 1.7, 3: 2.0},     # RIO GUADIARO (TR.MAJACEITE) (MA)
-    "11":  {1: 3.0, 2: 4.0, 3: 5.0},     # RIO GUADIARO (S PABLO BUCEITE) (CA)
-    "9":   {1: 2.0, 2: 3.0, 3: 4.0},     # RIO HOZGARGANTA (JIMENA) (CA)
-    "128": {1: 1.5, 2: 2.0, 3: 2.5},     # RIO TURÓN (ARDALES) (MA)
+    "34":  {1: 3.0, 2: 4.0, 3: 5.0},
+    "220": {1: 2.0, 2: 3.0, 3: 4.0},
+    "212": {1: 4.0, 2: 5.0, 3: 6.0},
+    "219": {1: 3.0, 2: 4.0, 3: 5.0},
+    "224": {1: 1.0, 2: 2.0, 3: 3.0},
+    "46":  {1: 1.0, 2: 1.5, 3: 2.0},
+    "129": {1: 1.5, 2: 2.0, 3: 2.5},
+    "214": {1: 4.5, 2: 5.5, 3: 6.5},
+    "43":  {1: 1.7, 2: 2.3, 3: 2.8},
+    "106": {1: 1.0, 2: 2.0, 3: 3.2},
+    "13":  {1: 1.0, 2: 1.6, 3: 2.1},
+    "130": {1: 2.0, 2: 3.0, 3: 5.0},
+    "1027":{1: 2.5, 2: 3.0, 3: 4.0},
+    "104": {1: 1.0, 2: 1.5, 3: 2.0},
+    "38":  {1: 2.5, 2: 3.5, 3: 4.5},
+    "103": {1: 1.4, 2: 1.7, 3: 2.0},
+    "11":  {1: 3.0, 2: 4.0, 3: 5.0},
+    "9":   {1: 2.0, 2: 3.0, 3: 4.0},
+    "128": {1: 1.5, 2: 2.0, 3: 2.5},
 }
 
 
@@ -134,7 +133,6 @@ def build_items(state, stations, last_update_text):
     items = []
     last_levels = state.get("last_levels", {})
 
-    # Solo MA/CA
     stations = [s for s in stations if s.get("prov") in ("MA", "CA")]
 
     for s in stations:
@@ -143,77 +141,75 @@ def build_items(state, stations, last_update_text):
         prev = last_levels.get(sid)
 
         thresholds = THRESHOLDS_BY_STATION.get(str(sid))
-
-        # Solo alertamos si hay umbrales definidos para esa estación
         if thresholds:
             for lvl, thr in thresholds.items():
                 if crossed(prev, curr, thr):
-                    title = f"Nivel {lvl} alcanzado: {s['name']}"
-                    desc = (
-                        f"Estación {sid} ({s.get('prov')}): "
-                        f"el NIVEL MEDIO pasa de {prev:.2f} m a {curr:.2f} m "
-                        f"y cruza el umbral {thr:.2f} m.\n"
-                        f"Datos actualizados a: {last_update_text}."
-                    )
-                    guid = f"cross-{sid}-L{lvl}-{last_update_text}"
                     items.append(
                         {
-                            "title": title,
-                            "description": desc,
-                            "guid": guid,
+                            "title": f"Nivel {lvl} alcanzado: {s['name']}",
+                            "description": (
+                                f"Estación {sid} ({s.get('prov')}): "
+                                f"el NIVEL MEDIO pasa de {prev:.2f} m a {curr:.2f} m "
+                                f"y cruza el umbral {thr:.2f} m.\n"
+                                f"Datos actualizados a: {last_update_text}."
+                            ),
+                            "guid": f"cross-{sid}-L{lvl}-{last_update_text}",
                             "pubDate": rfc2822_now(),
                             "link": RSS_LINK,
                         }
                     )
 
-        # Guardamos siempre el último nivel (para que cuando añadas umbrales nuevos,
-        # el sistema tenga "previo" y funcione bien)
         if curr is not None:
             last_levels[sid] = curr
 
-    # HEARTBEAT
+    # HEARTBEAT (máximo 1 vez al día)
     if not items:
         today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        items.append(
-            {
-                "title": "No se han producido fluctuaciones reseñables",
-                "description": (
-                    "No se han detectado fluctuaciones significativas, ni cruces de umbrales "
-                    "(niveles 1/2/3) en estaciones de Málaga y/o Cádiz.\n"
-                    f"Datos actualizados a: {last_update_text}."
-                ),
-                "guid": f"estado-estable-{today}",
-                "pubDate": rfc2822_now(),
-                "link": RSS_LINK,
-            }
-        )
+        if state.get("last_heartbeat_date") != today:
+            items.append(
+                {
+                    "title": "No se han producido fluctuaciones reseñables",
+                    "description": (
+                        "No se han detectado fluctuaciones significativas, ni cruces de umbrales "
+                        "(niveles 1/2/3) en estaciones de Málaga y/o Cádiz.\n"
+                        f"Datos actualizados a: {last_update_text}."
+                    ),
+                    "guid": f"estado-estable-{today}",
+                    "pubDate": rfc2822_now(),
+                    "link": RSS_LINK,
+                }
+            )
+            state["last_heartbeat_date"] = today
 
     state["last_levels"] = last_levels
     return items
 
 
 def write_rss(items):
-    parts = []
-    parts.append('<?xml version="1.0" encoding="UTF-8"?>')
-    parts.append("<rss version=\"2.0\">")
-    parts.append("<channel>")
-    parts.append(f"<title>{RSS_TITLE}</title>")
-    parts.append(f"<link>{RSS_LINK}</link>")
-    parts.append(f"<description>{RSS_DESC}</description>")
-    parts.append(f"<lastBuildDate>{rfc2822_now()}</lastBuildDate>")
+    parts = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<rss version="2.0">',
+        "<channel>",
+        f"<title>{RSS_TITLE}</title>",
+        f"<link>{RSS_LINK}</link>",
+        f"<description>{RSS_DESC}</description>",
+        f"<lastBuildDate>{rfc2822_now()}</lastBuildDate>",
+    ]
 
     for it in items:
-        parts.append("<item>")
-        parts.append(f"<title><![CDATA[{it['title']}]]></title>")
-        parts.append(f"<link>{it['link']}</link>")
-        parts.append(f"<guid isPermaLink='false'>{it['guid']}</guid>")
-        parts.append(f"<pubDate>{it['pubDate']}</pubDate>")
-        parts.append(f"<description><![CDATA[{it['description']}]]></description>")
-        parts.append("</item>")
+        parts.extend(
+            [
+                "<item>",
+                f"<title><![CDATA[{it['title']}]]></title>",
+                f"<link>{it['link']}</link>",
+                f"<guid isPermaLink='false'>{it['guid']}</guid>",
+                f"<pubDate>{it['pubDate']}</pubDate>",
+                f"<description><![CDATA[{it['description']}]]></description>",
+                "</item>",
+            ]
+        )
 
-    parts.append("</channel>")
-    parts.append("</rss>")
-
+    parts.extend(["</channel>", "</rss>"])
     RSS_PATH.write_text("\n".join(parts) + "\n", encoding="utf-8")
 
 
