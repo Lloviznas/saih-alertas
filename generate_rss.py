@@ -172,8 +172,8 @@ def build_items(state, stations, last_update_text):
             {
                 "title": "No se han producido fluctuaciones reseñables",
                 "description": (
-                    "No se han detectado fluctuaciones significativas ni cruces "
-                    "de umbrales (niveles 1/2/3) en estaciones MA/CA.\n"
+                    "No se han detectado fluctuaciones significativas, ni cruces "
+                    "de umbrales (niveles 1/2/3) en estaciones de Málaga y/o Cádiz.\n"
                     f"Datos actualizados a: {last_update_text}."
                 ),
                 "guid": f"estado-estable-{today}",
@@ -223,3 +223,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
