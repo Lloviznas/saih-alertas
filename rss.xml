@@ -4,14 +4,14 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Thu, 22 Jan 2026 02:30:49 +0000</lastBuildDate>
+<lastBuildDate>Thu, 22 Jan 2026 04:02:52 +0000</lastBuildDate>
 <item>
-<title><![CDATA[Nivel 2 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
+<title><![CDATA[No se han producido fluctuaciones reseñables]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-214-L2-22-01-2026 03:00:00</guid>
-<pubDate>Thu, 22 Jan 2026 02:30:49 +0000</pubDate>
-<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 4.68 m a 5.92 m y cruza el umbral 5.50 m.
-Datos actualizados a: 22-01-2026 03:00:00.]]></description>
+<guid isPermaLink='false'>estado-estable-2026-01-22</guid>
+<pubDate>Thu, 22 Jan 2026 04:02:52 +0000</pubDate>
+<description><![CDATA[No se han detectado fluctuaciones significativas, ni cruces de umbrales (niveles 1/2/3) en estaciones de Málaga y/o Cádiz.
+Datos actualizados a: 22-01-2026 04:00:00.]]></description>
 </item>
 </channel>
 </rss>
