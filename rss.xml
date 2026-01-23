@@ -4,14 +4,22 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Fri, 23 Jan 2026 06:49:59 +0000</lastBuildDate>
+<lastBuildDate>Fri, 23 Jan 2026 07:32:54 +0000</lastBuildDate>
 <item>
-<title><![CDATA[Nivel 2 alcanzado: RÍO HOZGARGANTA (JIMENA) (CA)]]></title>
+<title><![CDATA[Nivel 1 alcanzado: RÍO GUADIARO(S PABLO BUCEITE) (CA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-9-L2-23-01-2026 07:00:00</guid>
-<pubDate>Fri, 23 Jan 2026 06:49:59 +0000</pubDate>
-<description><![CDATA[Estación 9 (CA): el NIVEL MEDIO pasa de 2.97 m a 3.23 m y cruza el umbral 3.00 m.
-Datos actualizados a: 23-01-2026 07:00:00.]]></description>
+<guid isPermaLink='false'>cross-11-L1-23-01-2026 08:00:00</guid>
+<pubDate>Fri, 23 Jan 2026 07:32:54 +0000</pubDate>
+<description><![CDATA[Estación 11 (CA): el NIVEL MEDIO pasa de 2.32 m a 3.19 m y cruza el umbral 3.00 m.
+Datos actualizados a: 23-01-2026 08:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-214-L1-23-01-2026 08:00:00</guid>
+<pubDate>Fri, 23 Jan 2026 07:32:54 +0000</pubDate>
+<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 4.18 m a 5.23 m y cruza el umbral 4.50 m.
+Datos actualizados a: 23-01-2026 08:00:00.]]></description>
 </item>
 </channel>
 </rss>
