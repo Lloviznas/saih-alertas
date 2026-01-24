@@ -4,6 +4,14 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Sat, 24 Jan 2026 07:00:23 +0000</lastBuildDate>
+<lastBuildDate>Sat, 24 Jan 2026 07:32:59 +0000</lastBuildDate>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: GUADALETE-JEREZ DE LA FRONTERA(CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-212-L1-24-01-2026 08:00:00</guid>
+<pubDate>Sat, 24 Jan 2026 07:32:59 +0000</pubDate>
+<description><![CDATA[Estación 212 (CA): el NIVEL MEDIO pasa de 3.96 m a 4.00 m y cruza el umbral 4.00 m.
+Datos actualizados a: 24-01-2026 08:00:00.]]></description>
+</item>
 </channel>
 </rss>
