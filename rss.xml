@@ -4,6 +4,30 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Tue, 27 Jan 2026 11:50:28 +0000</lastBuildDate>
+<lastBuildDate>Tue, 27 Jan 2026 13:06:32 +0000</lastBuildDate>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RÍO HOZGARGANTA (JIMENA) (CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-9-L2-27-01-2026 13:00:00</guid>
+<pubDate>Tue, 27 Jan 2026 13:06:32 +0000</pubDate>
+<description><![CDATA[Estación 9 (CA): el NIVEL MEDIO pasa de 2.91 m a 3.38 m y cruza el umbral 3.00 m.
+Datos actualizados a: 27-01-2026 13:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RÍO GUADIARO(S PABLO BUCEITE) (CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-11-L2-27-01-2026 13:00:00</guid>
+<pubDate>Tue, 27 Jan 2026 13:06:32 +0000</pubDate>
+<description><![CDATA[Estación 11 (CA): el NIVEL MEDIO pasa de 3.39 m a 4.16 m y cruza el umbral 4.00 m.
+Datos actualizados a: 27-01-2026 13:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RÍO GUADIARO (TR. MAJACEITE) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-103-L2-27-01-2026 13:00:00</guid>
+<pubDate>Tue, 27 Jan 2026 13:06:32 +0000</pubDate>
+<description><![CDATA[Estación 103 (MA): el NIVEL MEDIO pasa de 1.66 m a 1.97 m y cruza el umbral 1.70 m.
+Datos actualizados a: 27-01-2026 13:00:00.]]></description>
+</item>
 </channel>
 </rss>
