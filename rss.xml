@@ -4,22 +4,6 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Wed, 28 Jan 2026 15:17:12 +0000</lastBuildDate>
-<item>
-<title><![CDATA[Nivel 2 alcanzado: GUADALETE-JEREZ DE LA FRONTERA(CA)]]></title>
-<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-212-L2-28-01-2026 16:00:00</guid>
-<pubDate>Wed, 28 Jan 2026 15:17:12 +0000</pubDate>
-<description><![CDATA[Estación 212 (CA): el NIVEL MEDIO pasa de 4.99 m a 5.01 m y cruza el umbral 5.00 m.
-Datos actualizados a: 28-01-2026 16:00:00.]]></description>
-</item>
-<item>
-<title><![CDATA[Nivel 2 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
-<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-214-L2-28-01-2026 16:00:00</guid>
-<pubDate>Wed, 28 Jan 2026 15:17:12 +0000</pubDate>
-<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 5.11 m a 5.52 m y cruza el umbral 5.50 m.
-Datos actualizados a: 28-01-2026 16:00:00.]]></description>
-</item>
+<lastBuildDate>Wed, 28 Jan 2026 16:00:05 +0000</lastBuildDate>
 </channel>
 </rss>
