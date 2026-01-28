@@ -4,6 +4,38 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Wed, 28 Jan 2026 11:49:27 +0000</lastBuildDate>
+<lastBuildDate>Wed, 28 Jan 2026 13:06:49 +0000</lastBuildDate>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RÍO HOZGARGANTA (JIMENA) (CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-9-L2-28-01-2026 13:00:00</guid>
+<pubDate>Wed, 28 Jan 2026 13:06:49 +0000</pubDate>
+<description><![CDATA[Estación 9 (CA): el NIVEL MEDIO pasa de 2.94 m a 3.22 m y cruza el umbral 3.00 m.
+Datos actualizados a: 28-01-2026 13:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RÍO GENAL (JUBRIQUE) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-13-L2-28-01-2026 13:00:00</guid>
+<pubDate>Wed, 28 Jan 2026 13:06:49 +0000</pubDate>
+<description><![CDATA[Estación 13 (MA): el NIVEL MEDIO pasa de 1.43 m a 1.67 m y cruza el umbral 1.60 m.
+Datos actualizados a: 28-01-2026 13:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: RÍO CAMPANILLAS (LOS LLANES) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-106-L1-28-01-2026 13:00:00</guid>
+<pubDate>Wed, 28 Jan 2026 13:06:49 +0000</pubDate>
+<description><![CDATA[Estación 106 (MA): el NIVEL MEDIO pasa de 0.92 m a 1.03 m y cruza el umbral 1.00 m.
+Datos actualizados a: 28-01-2026 13:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RIO GUADALTEBA (AFORO TEBA) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-129-L2-28-01-2026 13:00:00</guid>
+<pubDate>Wed, 28 Jan 2026 13:06:49 +0000</pubDate>
+<description><![CDATA[Estación 129 (MA): el NIVEL MEDIO pasa de 1.99 m a 2.42 m y cruza el umbral 2.00 m.
+Datos actualizados a: 28-01-2026 13:00:00.]]></description>
+</item>
 </channel>
 </rss>
