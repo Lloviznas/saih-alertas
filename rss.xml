@@ -4,38 +4,14 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Wed, 28 Jan 2026 13:58:06 +0000</lastBuildDate>
+<lastBuildDate>Wed, 28 Jan 2026 14:42:17 +0000</lastBuildDate>
 <item>
-<title><![CDATA[Nivel 3 alcanzado: RÍO GUADIARO(S PABLO BUCEITE) (CA)]]></title>
+<title><![CDATA[Nivel 3 alcanzado: RÍO HOZGARGANTA (JIMENA) (CA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-11-L3-28-01-2026 14:00:00</guid>
-<pubDate>Wed, 28 Jan 2026 13:58:06 +0000</pubDate>
-<description><![CDATA[Estación 11 (CA): el NIVEL MEDIO pasa de 4.92 m a 5.51 m y cruza el umbral 5.00 m.
-Datos actualizados a: 28-01-2026 14:00:00.]]></description>
-</item>
-<item>
-<title><![CDATA[Nivel 2 alcanzado: RÍO GRANDE (LAS MILLANAS) (MA)]]></title>
-<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-104-L2-28-01-2026 14:00:00</guid>
-<pubDate>Wed, 28 Jan 2026 13:58:06 +0000</pubDate>
-<description><![CDATA[Estación 104 (MA): el NIVEL MEDIO pasa de 1.41 m a 1.50 m y cruza el umbral 1.50 m.
-Datos actualizados a: 28-01-2026 14:00:00.]]></description>
-</item>
-<item>
-<title><![CDATA[Nivel 1 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
-<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-214-L1-28-01-2026 14:00:00</guid>
-<pubDate>Wed, 28 Jan 2026 13:58:06 +0000</pubDate>
-<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 4.28 m a 4.63 m y cruza el umbral 4.50 m.
-Datos actualizados a: 28-01-2026 14:00:00.]]></description>
-</item>
-<item>
-<title><![CDATA[Nivel 3 alcanzado: BARCA DE LA FLORIDA (CA)]]></title>
-<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-220-L3-28-01-2026 14:00:00</guid>
-<pubDate>Wed, 28 Jan 2026 13:58:06 +0000</pubDate>
-<description><![CDATA[Estación 220 (CA): el NIVEL MEDIO pasa de 3.94 m a 4.09 m y cruza el umbral 4.00 m.
-Datos actualizados a: 28-01-2026 14:00:00.]]></description>
+<guid isPermaLink='false'>cross-9-L3-28-01-2026 15:00:00</guid>
+<pubDate>Wed, 28 Jan 2026 14:42:17 +0000</pubDate>
+<description><![CDATA[Estación 9 (CA): el NIVEL MEDIO pasa de 3.69 m a 4.24 m y cruza el umbral 4.00 m.
+Datos actualizados a: 28-01-2026 15:00:00.]]></description>
 </item>
 </channel>
 </rss>
