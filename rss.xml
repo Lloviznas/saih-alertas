@@ -4,6 +4,14 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Fri, 30 Jan 2026 23:59:56 +0000</lastBuildDate>
+<lastBuildDate>Sat, 31 Jan 2026 02:44:01 +0000</lastBuildDate>
+<item>
+<title><![CDATA[No se han producido fluctuaciones reseñables]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>estado-estable-2026-01-31</guid>
+<pubDate>Sat, 31 Jan 2026 02:44:01 +0000</pubDate>
+<description><![CDATA[No se han detectado fluctuaciones significativas, ni cruces de umbrales (niveles 1/2/3) en estaciones de Málaga y/o Cádiz.
+Datos actualizados a: 31-01-2026 03:00:00.]]></description>
+</item>
 </channel>
 </rss>
