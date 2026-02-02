@@ -4,6 +4,22 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Mon, 02 Feb 2026 11:52:03 +0000</lastBuildDate>
+<lastBuildDate>Mon, 02 Feb 2026 13:17:05 +0000</lastBuildDate>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: RÍO HOZGARGANTA (JIMENA) (CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-9-L1-02-02-2026 14:00:00</guid>
+<pubDate>Mon, 02 Feb 2026 13:17:05 +0000</pubDate>
+<description><![CDATA[Estación 9 (CA): el NIVEL MEDIO pasa de 1.17 m a 2.45 m y cruza el umbral 2.00 m.
+Datos actualizados a: 02-02-2026 14:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: RIO GUADALTEBA (AFORO TEBA) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-129-L1-02-02-2026 14:00:00</guid>
+<pubDate>Mon, 02 Feb 2026 13:17:05 +0000</pubDate>
+<description><![CDATA[Estación 129 (MA): el NIVEL MEDIO pasa de 1.21 m a 1.54 m y cruza el umbral 1.50 m.
+Datos actualizados a: 02-02-2026 14:00:00.]]></description>
+</item>
 </channel>
 </rss>
