@@ -4,14 +4,46 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Wed, 04 Feb 2026 00:01:23 +0000</lastBuildDate>
+<lastBuildDate>Wed, 04 Feb 2026 03:10:09 +0000</lastBuildDate>
 <item>
-<title><![CDATA[No se han producido fluctuaciones reseñables]]></title>
+<title><![CDATA[Nivel 1 alcanzado: RÍO HOZGARGANTA (JIMENA) (CA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>estado-estable-2026-02-04</guid>
-<pubDate>Wed, 04 Feb 2026 00:01:23 +0000</pubDate>
-<description><![CDATA[No se han detectado fluctuaciones significativas, ni cruces de umbrales (niveles 1/2/3) en estaciones de Málaga y/o Cádiz.
-Datos actualizados a: 04-02-2026 00:00:00.]]></description>
+<guid isPermaLink='false'>cross-9-L1-04-02-2026 03:00:00</guid>
+<pubDate>Wed, 04 Feb 2026 03:10:09 +0000</pubDate>
+<description><![CDATA[Estación 9 (CA): el NIVEL MEDIO pasa de 1.61 m a 3.30 m y cruza el umbral 2.00 m.
+Datos actualizados a: 04-02-2026 03:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RÍO HOZGARGANTA (JIMENA) (CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-9-L2-04-02-2026 03:00:00</guid>
+<pubDate>Wed, 04 Feb 2026 03:10:09 +0000</pubDate>
+<description><![CDATA[Estación 9 (CA): el NIVEL MEDIO pasa de 1.61 m a 3.30 m y cruza el umbral 3.00 m.
+Datos actualizados a: 04-02-2026 03:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: RÍO GUADIARO(S PABLO BUCEITE) (CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-11-L1-04-02-2026 03:00:00</guid>
+<pubDate>Wed, 04 Feb 2026 03:10:09 +0000</pubDate>
+<description><![CDATA[Estación 11 (CA): el NIVEL MEDIO pasa de 2.31 m a 3.59 m y cruza el umbral 3.00 m.
+Datos actualizados a: 04-02-2026 03:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: RÍO GUADIARO (TR. MAJACEITE) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-103-L1-04-02-2026 03:00:00</guid>
+<pubDate>Wed, 04 Feb 2026 03:10:09 +0000</pubDate>
+<description><![CDATA[Estación 103 (MA): el NIVEL MEDIO pasa de 1.32 m a 1.66 m y cruza el umbral 1.40 m.
+Datos actualizados a: 04-02-2026 03:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-214-L2-04-02-2026 03:00:00</guid>
+<pubDate>Wed, 04 Feb 2026 03:10:09 +0000</pubDate>
+<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 4.76 m a 5.73 m y cruza el umbral 5.50 m.
+Datos actualizados a: 04-02-2026 03:00:00.]]></description>
 </item>
 </channel>
 </rss>
