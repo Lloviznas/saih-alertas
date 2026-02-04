@@ -4,38 +4,38 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Wed, 04 Feb 2026 05:55:58 +0000</lastBuildDate>
+<lastBuildDate>Wed, 04 Feb 2026 07:04:47 +0000</lastBuildDate>
 <item>
-<title><![CDATA[Nivel 1 alcanzado: RÍO CAMPANILLAS (LOS LLANES) (MA)]]></title>
+<title><![CDATA[Nivel 3 alcanzado: RÍO GUADIARO(S PABLO BUCEITE) (CA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-106-L1-04-02-2026 06:00:00</guid>
-<pubDate>Wed, 04 Feb 2026 05:55:58 +0000</pubDate>
-<description><![CDATA[Estación 106 (MA): el NIVEL MEDIO pasa de 0.67 m a 1.26 m y cruza el umbral 1.00 m.
-Datos actualizados a: 04-02-2026 06:00:00.]]></description>
+<guid isPermaLink='false'>cross-11-L3-04-02-2026 07:00:00</guid>
+<pubDate>Wed, 04 Feb 2026 07:04:47 +0000</pubDate>
+<description><![CDATA[Estación 11 (CA): el NIVEL MEDIO pasa de 4.99 m a 5.22 m y cruza el umbral 5.00 m.
+Datos actualizados a: 04-02-2026 07:00:00.]]></description>
 </item>
 <item>
-<title><![CDATA[Nivel 2 alcanzado: RIO GUADALTEBA (AFORO TEBA) (MA)]]></title>
+<title><![CDATA[Nivel 2 alcanzado: RÍO GENAL (JUBRIQUE) (MA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-129-L2-04-02-2026 06:00:00</guid>
-<pubDate>Wed, 04 Feb 2026 05:55:58 +0000</pubDate>
-<description><![CDATA[Estación 129 (MA): el NIVEL MEDIO pasa de 1.83 m a 2.22 m y cruza el umbral 2.00 m.
-Datos actualizados a: 04-02-2026 06:00:00.]]></description>
+<guid isPermaLink='false'>cross-13-L2-04-02-2026 07:00:00</guid>
+<pubDate>Wed, 04 Feb 2026 07:04:47 +0000</pubDate>
+<description><![CDATA[Estación 13 (MA): el NIVEL MEDIO pasa de 1.53 m a 1.61 m y cruza el umbral 1.60 m.
+Datos actualizados a: 04-02-2026 07:00:00.]]></description>
 </item>
 <item>
-<title><![CDATA[Nivel 1 alcanzado: RÍO GUADALHORCE (ARCHIDONA) (MA)]]></title>
+<title><![CDATA[Nivel 1 alcanzado: AZUD DE PAREDONES (MA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-130-L1-04-02-2026 06:00:00</guid>
-<pubDate>Wed, 04 Feb 2026 05:55:58 +0000</pubDate>
-<description><![CDATA[Estación 130 (MA): el NIVEL MEDIO pasa de 1.48 m a 2.37 m y cruza el umbral 2.00 m.
-Datos actualizados a: 04-02-2026 06:00:00.]]></description>
+<guid isPermaLink='false'>cross-34-L1-04-02-2026 07:00:00</guid>
+<pubDate>Wed, 04 Feb 2026 07:04:47 +0000</pubDate>
+<description><![CDATA[Estación 34 (MA): el NIVEL MEDIO pasa de 2.84 m a 3.08 m y cruza el umbral 3.00 m.
+Datos actualizados a: 04-02-2026 07:00:00.]]></description>
 </item>
 <item>
-<title><![CDATA[Nivel 3 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
+<title><![CDATA[Nivel 1 alcanzado: RÍO GRANDE (LAS MILLANAS) (MA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-214-L3-04-02-2026 06:00:00</guid>
-<pubDate>Wed, 04 Feb 2026 05:55:58 +0000</pubDate>
-<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 6.43 m a 6.70 m y cruza el umbral 6.50 m.
-Datos actualizados a: 04-02-2026 06:00:00.]]></description>
+<guid isPermaLink='false'>cross-104-L1-04-02-2026 07:00:00</guid>
+<pubDate>Wed, 04 Feb 2026 07:04:47 +0000</pubDate>
+<description><![CDATA[Estación 104 (MA): el NIVEL MEDIO pasa de 0.96 m a 1.18 m y cruza el umbral 1.00 m.
+Datos actualizados a: 04-02-2026 07:00:00.]]></description>
 </item>
 </channel>
 </rss>
