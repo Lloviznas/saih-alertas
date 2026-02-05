@@ -4,14 +4,22 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Thu, 05 Feb 2026 14:27:20 +0000</lastBuildDate>
+<lastBuildDate>Thu, 05 Feb 2026 15:22:01 +0000</lastBuildDate>
 <item>
-<title><![CDATA[Nivel 1 alcanzado: RÍO CAMPANILLAS (LOS LLANES) (MA)]]></title>
+<title><![CDATA[Nivel 1 alcanzado: RÍO GUADALHORCE (ARCHIDONA) (MA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-106-L1-05-02-2026 15:00:00</guid>
-<pubDate>Thu, 05 Feb 2026 14:27:20 +0000</pubDate>
-<description><![CDATA[Estación 106 (MA): el NIVEL MEDIO pasa de 0.96 m a 1.20 m y cruza el umbral 1.00 m.
-Datos actualizados a: 05-02-2026 15:00:00.]]></description>
+<guid isPermaLink='false'>cross-130-L1-05-02-2026 16:00:00</guid>
+<pubDate>Thu, 05 Feb 2026 15:22:01 +0000</pubDate>
+<description><![CDATA[Estación 130 (MA): el NIVEL MEDIO pasa de 1.93 m a 2.17 m y cruza el umbral 2.00 m.
+Datos actualizados a: 05-02-2026 16:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-214-L2-05-02-2026 16:00:00</guid>
+<pubDate>Thu, 05 Feb 2026 15:22:01 +0000</pubDate>
+<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 5.35 m a 5.66 m y cruza el umbral 5.50 m.
+Datos actualizados a: 05-02-2026 16:00:00.]]></description>
 </item>
 </channel>
 </rss>
