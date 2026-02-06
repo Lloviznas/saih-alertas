@@ -4,6 +4,14 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Fri, 06 Feb 2026 10:51:27 +0000</lastBuildDate>
+<lastBuildDate>Fri, 06 Feb 2026 11:39:51 +0000</lastBuildDate>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: RIO GUADALTEBA (AFORO TEBA) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-129-L1-06-02-2026 12:00:00</guid>
+<pubDate>Fri, 06 Feb 2026 11:39:51 +0000</pubDate>
+<description><![CDATA[Estación 129 (MA): el NIVEL MEDIO pasa de 1.33 m a 1.50 m y cruza el umbral 1.50 m.
+Datos actualizados a: 06-02-2026 12:00:00.]]></description>
+</item>
 </channel>
 </rss>
