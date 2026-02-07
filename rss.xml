@@ -4,6 +4,22 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Sat, 07 Feb 2026 19:56:25 +0000</lastBuildDate>
+<lastBuildDate>Sat, 07 Feb 2026 20:38:38 +0000</lastBuildDate>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RÍO GRANDE (LAS MILLANAS) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-104-L2-07-02-2026 21:00:00</guid>
+<pubDate>Sat, 07 Feb 2026 20:38:38 +0000</pubDate>
+<description><![CDATA[Estación 104 (MA): el NIVEL MEDIO pasa de 1.45 m a 1.50 m y cruza el umbral 1.50 m.
+Datos actualizados a: 07-02-2026 21:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: RÍO GUADALHORCE (ARCHIDONA) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-130-L1-07-02-2026 21:00:00</guid>
+<pubDate>Sat, 07 Feb 2026 20:38:38 +0000</pubDate>
+<description><![CDATA[Estación 130 (MA): el NIVEL MEDIO pasa de 1.71 m a 2.16 m y cruza el umbral 2.00 m.
+Datos actualizados a: 07-02-2026 21:00:00.]]></description>
+</item>
 </channel>
 </rss>
