@@ -4,6 +4,30 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Sat, 07 Feb 2026 17:59:07 +0000</lastBuildDate>
+<lastBuildDate>Sat, 07 Feb 2026 18:51:35 +0000</lastBuildDate>
+<item>
+<title><![CDATA[Nivel 2 alcanzado: RIO GUADALTEBA (AFORO TEBA) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-129-L2-07-02-2026 19:00:00</guid>
+<pubDate>Sat, 07 Feb 2026 18:51:35 +0000</pubDate>
+<description><![CDATA[Estación 129 (MA): el NIVEL MEDIO pasa de 1.95 m a 2.65 m y cruza el umbral 2.00 m.
+Datos actualizados a: 07-02-2026 19:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 3 alcanzado: RIO GUADALTEBA (AFORO TEBA) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-129-L3-07-02-2026 19:00:00</guid>
+<pubDate>Sat, 07 Feb 2026 18:51:35 +0000</pubDate>
+<description><![CDATA[Estación 129 (MA): el NIVEL MEDIO pasa de 1.95 m a 2.65 m y cruza el umbral 2.50 m.
+Datos actualizados a: 07-02-2026 19:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 3 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-214-L3-07-02-2026 19:00:00</guid>
+<pubDate>Sat, 07 Feb 2026 18:51:35 +0000</pubDate>
+<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 6.11 m a 6.53 m y cruza el umbral 6.50 m.
+Datos actualizados a: 07-02-2026 19:00:00.]]></description>
+</item>
 </channel>
 </rss>
