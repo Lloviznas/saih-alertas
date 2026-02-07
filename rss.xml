@@ -4,14 +4,30 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Sat, 07 Feb 2026 16:50:18 +0000</lastBuildDate>
+<lastBuildDate>Sat, 07 Feb 2026 17:32:53 +0000</lastBuildDate>
 <item>
-<title><![CDATA[Nivel 2 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
+<title><![CDATA[Nivel 2 alcanzado: RÍO HOZGARGANTA (JIMENA) (CA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-214-L2-07-02-2026 17:00:00</guid>
-<pubDate>Sat, 07 Feb 2026 16:50:18 +0000</pubDate>
-<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 5.32 m a 5.60 m y cruza el umbral 5.50 m.
-Datos actualizados a: 07-02-2026 17:00:00.]]></description>
+<guid isPermaLink='false'>cross-9-L2-07-02-2026 18:00:00</guid>
+<pubDate>Sat, 07 Feb 2026 17:32:53 +0000</pubDate>
+<description><![CDATA[Estación 9 (CA): el NIVEL MEDIO pasa de 2.80 m a 3.35 m y cruza el umbral 3.00 m.
+Datos actualizados a: 07-02-2026 18:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: AZUD DE PAREDONES (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-34-L1-07-02-2026 18:00:00</guid>
+<pubDate>Sat, 07 Feb 2026 17:32:53 +0000</pubDate>
+<description><![CDATA[Estación 34 (MA): el NIVEL MEDIO pasa de 2.78 m a 3.03 m y cruza el umbral 3.00 m.
+Datos actualizados a: 07-02-2026 18:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: RIO GUADALTEBA (AFORO TEBA) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-129-L1-07-02-2026 18:00:00</guid>
+<pubDate>Sat, 07 Feb 2026 17:32:53 +0000</pubDate>
+<description><![CDATA[Estación 129 (MA): el NIVEL MEDIO pasa de 1.36 m a 1.95 m y cruza el umbral 1.50 m.
+Datos actualizados a: 07-02-2026 18:00:00.]]></description>
 </item>
 </channel>
 </rss>
