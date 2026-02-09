@@ -4,14 +4,14 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Mon, 09 Feb 2026 06:43:45 +0000</lastBuildDate>
+<lastBuildDate>Mon, 09 Feb 2026 07:44:53 +0000</lastBuildDate>
 <item>
-<title><![CDATA[Nivel 2 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
+<title><![CDATA[Nivel 1 alcanzado: RÍO GRANDE (LAS MILLANAS) (MA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-214-L2-09-02-2026 07:00:00</guid>
-<pubDate>Mon, 09 Feb 2026 06:43:45 +0000</pubDate>
-<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 5.27 m a 5.60 m y cruza el umbral 5.50 m.
-Datos actualizados a: 09-02-2026 07:00:00.]]></description>
+<guid isPermaLink='false'>cross-104-L1-09-02-2026 08:00:00</guid>
+<pubDate>Mon, 09 Feb 2026 07:44:53 +0000</pubDate>
+<description><![CDATA[Estación 104 (MA): el NIVEL MEDIO pasa de 0.98 m a 1.00 m y cruza el umbral 1.00 m.
+Datos actualizados a: 09-02-2026 08:00:00.]]></description>
 </item>
 </channel>
 </rss>
