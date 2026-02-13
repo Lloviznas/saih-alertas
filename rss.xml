@@ -4,14 +4,22 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Fri, 13 Feb 2026 11:47:44 +0000</lastBuildDate>
+<lastBuildDate>Fri, 13 Feb 2026 13:17:50 +0000</lastBuildDate>
 <item>
-<title><![CDATA[Nivel 1 alcanzado: RÍO ALAMO (BENALUP-CASAS V.)(CA)]]></title>
+<title><![CDATA[Nivel 2 alcanzado: RÍO GUADIARO (TR. MAJACEITE) (MA)]]></title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
-<guid isPermaLink='false'>cross-214-L1-13-02-2026 12:00:00</guid>
-<pubDate>Fri, 13 Feb 2026 11:47:44 +0000</pubDate>
-<description><![CDATA[Estación 214 (CA): el NIVEL MEDIO pasa de 4.47 m a 4.61 m y cruza el umbral 4.50 m.
-Datos actualizados a: 13-02-2026 12:00:00.]]></description>
+<guid isPermaLink='false'>cross-103-L2-13-02-2026 14:00:00</guid>
+<pubDate>Fri, 13 Feb 2026 13:17:50 +0000</pubDate>
+<description><![CDATA[Estación 103 (MA): el NIVEL MEDIO pasa de 1.61 m a 2.32 m y cruza el umbral 1.70 m.
+Datos actualizados a: 13-02-2026 14:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 3 alcanzado: RÍO GUADIARO (TR. MAJACEITE) (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-103-L3-13-02-2026 14:00:00</guid>
+<pubDate>Fri, 13 Feb 2026 13:17:50 +0000</pubDate>
+<description><![CDATA[Estación 103 (MA): el NIVEL MEDIO pasa de 1.61 m a 2.32 m y cruza el umbral 2.00 m.
+Datos actualizados a: 13-02-2026 14:00:00.]]></description>
 </item>
 </channel>
 </rss>
