@@ -4,6 +4,30 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Tue, 17 Feb 2026 11:55:49 +0000</lastBuildDate>
+<lastBuildDate>Tue, 17 Feb 2026 13:23:09 +0000</lastBuildDate>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: AZUD DE PAREDONES (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-34-L1-17-02-2026 14:00:00</guid>
+<pubDate>Tue, 17 Feb 2026 13:23:09 +0000</pubDate>
+<description><![CDATA[Estación 34 (MA): el NIVEL MEDIO pasa de 2.84 m a 3.15 m y cruza el umbral 3.00 m.
+Datos actualizados a: 17-02-2026 14:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: JUNTA DE LOS RÍOS (CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-219-L1-17-02-2026 14:00:00</guid>
+<pubDate>Tue, 17 Feb 2026 13:23:09 +0000</pubDate>
+<description><![CDATA[Estación 219 (CA): el NIVEL MEDIO pasa de 2.91 m a 3.07 m y cruza el umbral 3.00 m.
+Datos actualizados a: 17-02-2026 14:00:00.]]></description>
+</item>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: BARCA DE LA FLORIDA (CA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-220-L1-17-02-2026 14:00:00</guid>
+<pubDate>Tue, 17 Feb 2026 13:23:09 +0000</pubDate>
+<description><![CDATA[Estación 220 (CA): el NIVEL MEDIO pasa de 1.97 m a 2.01 m y cruza el umbral 2.00 m.
+Datos actualizados a: 17-02-2026 14:00:00.]]></description>
+</item>
 </channel>
 </rss>
