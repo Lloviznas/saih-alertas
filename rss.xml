@@ -4,6 +4,14 @@
 <title>AVISOS CRECIDAS SAIH</title>
 <link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
 <description>Avisos automáticos de crecidas (SAIH Hidrosur) cuando el NIVEL MEDIO cruza niveles 1/2/3 en estaciones (MA/CA).</description>
-<lastBuildDate>Fri, 20 Feb 2026 12:02:15 +0000</lastBuildDate>
+<lastBuildDate>Fri, 20 Feb 2026 13:34:35 +0000</lastBuildDate>
+<item>
+<title><![CDATA[Nivel 1 alcanzado: AZUD DE PAREDONES (MA)]]></title>
+<link>https://www.redhidrosurmedioambiente.es/saih/resumen/rios</link>
+<guid isPermaLink='false'>cross-34-L1-20-02-2026 14:00:00</guid>
+<pubDate>Fri, 20 Feb 2026 13:34:35 +0000</pubDate>
+<description><![CDATA[Estación 34 (MA): el NIVEL MEDIO pasa de 2.41 m a 3.13 m y cruza el umbral 3.00 m.
+Datos actualizados a: 20-02-2026 14:00:00.]]></description>
+</item>
 </channel>
 </rss>
